@@ -1,0 +1,23 @@
+
+### Sample Valid Authentication
+
+POST https://localhost:7100/api/login 
+Content-Type: Application/json
+{
+  "Username": "yogi",
+  "Password": "Password1"
+}
+
+### Sample Invalid Authentication
+
+POST https://localhost:7100/api/login 
+Content-Type: Application/json
+{
+  "Username": "yogi",
+  "Password": "PasswordABC"
+}
+### Sample Authorization. Paste Token here before sending the request
+@auth=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkdlbmVyaWMiLCJVc2VybmFtZSI6InlvZ2kiLCJuYmYiOjE2OTUxNjQ0NTQsImV4cCI6MTY5NTE2NTY1NCwiaWF0IjoxNjk1MTY0NDU0LCJpc3MiOiJHZW5lcmljIiwiYXVkIjoiR2VuZXJhbCBBdWRpZW5jZSJ9.ZOp2MA1ZD6ADjDxg_024jqgvp8EY77Z5AkwP22uFpNOG2J9zmRPgql8z0QKU9e-p_YwnljB5kHxY1Frt2Nz3uR0Na4q4i-eA7VZC6TQhIvfGBnZjO2cP9zwMjOIHZHc855e0kRXKkaLIm3KlYGEi8KSqmCtwD6hLmzRML86sy8iovOJXZkw41Srjo9BgB62eeq4BxbFY-VaQJSi58Vbc6NgH2936dZfEegnDkGLJoHrZDx-Q9CHiV1RfekuXS3AxByNRO89NW1ubCjk4AZZnI15-Er6PHVygepS7tqFT3mHSzs08mOXlNRZk-aYgtJXbJzFHKxwk179IH9U1Fb68Sw
+GET https://localhost:7100/api/restricted
+Authorization: {{auth}}
+###
